@@ -1,0 +1,56 @@
+<div>
+    <h2>CourseSettings</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="courseSetting.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new CourseSetting</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Setting</span></th>
+                    <th><span>student</span></th>
+                    <th><span>course</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="courseSetting in courseSettings track by courseSetting.id">
+                    <td><a ui-sref="courseSetting.detail({id:courseSetting.id})">{{courseSetting.id}}</a></td>
+                    <td>{{courseSetting.setting}}</td>
+                    <td>
+                        <a ui-sref="student.detail({id:courseSetting.student.id})">{{courseSetting.student.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="course.detail({id:courseSetting.course.id})">{{courseSetting.course.id}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="courseSetting.detail({id:courseSetting.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="courseSetting.edit({id:courseSetting.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="courseSetting.delete({id:courseSetting.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
