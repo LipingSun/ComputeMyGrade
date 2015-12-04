@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "ComputeMyGrade",
+    "packageName": "edu.sjsu.cmpe235.project",
+    "packageFolder": "edu/sjsu/cmpe235/project",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "73d220388d2f5a55a3a003cb4628e6041891ac65",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

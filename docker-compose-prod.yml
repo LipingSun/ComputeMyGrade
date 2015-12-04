@@ -1,0 +1,11 @@
+jhipster-prod-postgresql:
+  container_name: ComputeMyGrade-prod-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  # - ~/volumes/jhipster/ComputeMyGrade/prod-postgresql/:/var/lib/postgresql/
+  environment:
+  - POSTGRES_USER=ComputeMyGrade
+  - POSTGRES_PASSWORD=
+  ports:
+  - "5432:5432"
+
