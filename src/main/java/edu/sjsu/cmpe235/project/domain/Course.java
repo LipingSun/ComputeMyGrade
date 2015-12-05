@@ -25,7 +25,7 @@ public class Course implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description", columnDefinition="text")
+    @Column(name = "description")
     private String description;
 
     @OneToMany(mappedBy = "course")
