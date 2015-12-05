@@ -25,7 +25,7 @@ public class Course implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition="text")
     private String description;
 
     @OneToMany(mappedBy = "course")
@@ -33,7 +33,7 @@ public class Course implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<CourseSetting> courseSettings = new HashSet<>();
 
-    
+
     public Long getId() {
         return id;
     }
