@@ -7,7 +7,7 @@ angular.module('computeMyGradeApp')
                 parent: 'admin',
                 url: '/docs',
                 data: {
-                    authorities: ['ROLE_ADMIN'],
+                    //authorities: ['ROLE_ADMIN'],
                     pageTitle: 'API'
                 },
                 views: {
@@ -16,7 +16,7 @@ angular.module('computeMyGradeApp')
                     }
                 },
                 resolve: {
-                    
+
                 }
             });
     });
